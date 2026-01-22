@@ -33,7 +33,7 @@ header {
 .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
 .btn {
     display: inline-block;
-    background: #007bff;
+    background: #6f42c1;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -74,4 +74,5 @@ footer {
 .socials a {
     color: #ddd;
     margin: 0 10px;
+
 }
