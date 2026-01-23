@@ -76,3 +76,14 @@ footer {
     margin: 0 10px;
 
 }
+
+/* Profil Fotoğrafı Ayarları */
+.profile-photo {
+    width: 150px;       /* Genişlik */
+    height: 150px;      /* Yükseklik */
+    border-radius: 50%; /* Tam yuvarlak yapar */
+    object-fit: cover;  /* Fotoğrafı ezilmeden sığdırır */
+    border: 3px solid #fff; /* Etrafına beyaz çerçeve ekler */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Hafif gölge */
+    margin-bottom: 20px; /* Yazıyla arasına boşluk koyar */
+}
