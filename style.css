@@ -215,3 +215,29 @@ footer p { opacity: 0.6; font-size: 0.9rem; }
 
 .socials a:hover::after { width: 100%; }
 
+/* Yetenekler Bölümü Tasarımı */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skills-grid span {
+    background: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4e2a84;
+    transition: all 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+.skills-grid span:hover {
+    background: #6f42c1;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(111, 66, 193, 0.2);
+}
