@@ -1,10 +1,19 @@
 /* Temel Ayarlar */
+html {
+    scroll-behavior: smooth; /* Sayfa içi geçişleri yumuşatır */
+}
+
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden; /* Taşmaları engeller */
+}
+
+a, .btn, .card {
+    transition: all 0.3s ease-in-out; /* Her türlü değişikliği (renk, boyut) yumuşatır */
 }
 
 a { text-decoration: none; color: inherit; }
@@ -17,80 +26,134 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky; /* Sayfayı kaydırırken üstte sabit kalır */
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-links { display: flex; gap: 20px; }
-.logo { font-weight: bold; font-size: 1.5rem; }
+.nav-links a:hover { color: #6f42c1; } /* Link üzerine gelince renk değişimi */
+
+.logo { 
+    font-weight: bold; 
+    font-size: 1.5rem; 
+    letter-spacing: -1px;
+}
+
+/* Giriş Animasyonu */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* Hero Bölümü */
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background: #f4f4f4;
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    animation: fadeInUp 1s ease-out; /* Sayfa açılışında yukarı süzülme efekti */
 }
 
-.hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+.hero h1 { 
+    font-size: 3rem; 
+    margin-bottom: 15px; 
+    font-weight: 700;
+}
+
 .btn {
     display: inline-block;
     background: #6f42c1;
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 20px;
+    padding: 12px 28px;
+    border-radius: 30px; /* Daha modern, yuvarlak buton */
+    margin-top: 25px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(111, 66, 193, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px); /* Hafif yukarı kalkma */
+    box-shadow: 0 6px 20px rgba(111, 66, 193, 0.4);
+    background: #5a32a3;
 }
 
 /* Genel Konteyner */
 .container {
-    padding: 60px 5%;
-    max-width: 1200px;
+    padding: 80px 5%;
+    max-width: 1100px;
     margin: auto;
 }
 
 /* Proje Kartları */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .card {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    transition: transform 0.3s;
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
 }
 
-.card:hover { transform: translateY(-5px); }
+.card:hover { 
+    transform: translateY(-10px); /* Daha belirgin yükselme */
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    border-color: #6f42c1;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #222;
+}
 
 /* Footer */
 footer {
-    background: #333;
+    background: #1a1a1a; /* Daha koyu, profesyonel siyah */
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
+}
+
+.socials {
+    margin-top: 20px;
 }
 
 .socials a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333; /* Veya temanın rengi */
-    font-weight: bold;
-    transition: color 0.3s ease;
+    margin: 0 15px;
+    color: #bbb; /* Footer içinde linklerin görünmesi için açık renk */
+    font-size: 0.95rem;
+    font-weight: 500;
 }
 
 .socials a:hover {
-    color: #0077b5; /* LinkedIn mavisi gibi bir renk */
+    color: #fff; /* Üzerine gelince parlaması */
+    text-decoration: underline;
 }
 
 /* Profil Fotoğrafı Ayarları */
 .profile-photo {
-    width: 150px;       /* Genişlik */
-    height: 150px;      /* Yükseklik */
-    border-radius: 50%; /* Tam yuvarlak yapar */
-    object-fit: cover;  /* Fotoğrafı ezilmeden sığdırır */
-    border: 3px solid #fff; /* Etrafına beyaz çerçeve ekler */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Hafif gölge */
-    margin-bottom: 20px; /* Yazıyla arasına boşluk koyar */
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+    transition: transform 0.5s ease; /* Fotoğraf üzerine gelince etkileşim */
 }
 
+.profile-photo:hover {
+    transform: rotate(5deg) scale(1.05); /* Hafif dönme ve büyüme */
+}
