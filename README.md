@@ -3,7 +3,7 @@
 Sabancı Üniversitesi'nde Bilgisayar Bilimi ve Mühendisliği öğrencisiyim ve İş Analitiği üzerine yan dal yapıyorum. Yazılım geliştirme, veri analizi ve yapay zeka teknolojileriyle operasyonel verimliliği artırmaya odaklanıyorum.
 +1
 
-Aynı zamanda Sabancı Üniversitesi Endüstri Mühendisliği Topluluğu (IES) Yönetim Kurulu Başkanı olarak, büyük ölçekli organizasyonlar ve ekip yönetimi konularında aktif rol alıyorum.
+Aynı zamanda Sabancı Üniversitesi Endüstri Mühendisliği Topluluğu (IES) Organizasyon Başkanı olarak, büyük ölçekli organizasyonlar ve ekip yönetimi konularında aktif rol alıyorum.
 
 
 🛠️ Teknik Yetkinlikler
@@ -29,7 +29,7 @@ AI-Driven Decisions in Business: Üç farklı sektördeki AI uygulamalarını an
 
 IES Sabancı | Başkan: 1.000'den fazla katılımcıya ulaşan kariyer etkinliklerini (IMIS vb.) koordine ediyor, 50 kişilik bir ekibi ve 50+ kurumsal sponsorluk sürecini yönetiyorum.
 
-Sabancı Üniversitesi | Pazarlama ve Kurumsal İletişim: Üniversitenin resmi sosyal medya hesapları için veri odaklı içerik stratejileri geliştiriyorum.
+Sabancı Üniversitesi | Pazarlama ve Kurumsal İletişim: Üniversitenin resmi sosyal medya hesapları için veri içerik üretiyorum.
 
 
 🎓 Eğitim & Sertifikalar
