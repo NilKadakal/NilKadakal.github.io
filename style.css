@@ -72,9 +72,15 @@ footer {
 }
 
 .socials a {
-    color: #ddd;
     margin: 0 10px;
+    text-decoration: none;
+    color: #333; /* Veya temanın rengi */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
 
+.socials a:hover {
+    color: #0077b5; /* LinkedIn mavisi gibi bir renk */
 }
 
 /* Profil Fotoğrafı Ayarları */
@@ -87,3 +93,4 @@ footer {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Hafif gölge */
     margin-bottom: 20px; /* Yazıyla arasına boşluk koyar */
 }
+
