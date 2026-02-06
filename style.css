@@ -116,3 +116,9 @@
     /* Üzerine gelince hafif mor bir ton ekler */
     background: linear-gradient(90deg, rgba(78, 42, 132, 0.9) 0%, rgba(0,0,0,0.5) 100%);
 }
+
+/* Deneyim Arka Planları */
+.exp-ies { background-image: url('IES.jpg'); }
+.exp-fin { background-image: url('fin.jpg.png'); }
+.exp-sos { background-image: url('sos.jpg'); }
+.exp-kant { background-image: url('kant.jpg'); }
