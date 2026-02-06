@@ -43,11 +43,31 @@ header {
    ========================================= */
 .exp-timeline { display: flex; flex-direction: column; gap: 25px; margin-top: 30px; }
 
+
 .exp-card {
-    position: relative; border-radius: 18px; overflow: hidden;
-    min-height: 250px; display: flex; align-items: center;
+    position: relative; 
+    border-radius: 18px; 
+    overflow: hidden;
+    min-height: 250px; 
+    display: flex; 
+    align-items: center;
+    background: #ffffff; 
+    border: 1px solid #eee;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /
+    padding: 20px;
+}
+
+.exp-card:hover {
+    transform: translateY(-10px); /* Yukarı zıplama efekti */
+    box-shadow: 0 15px 35px rgba(78, 42, 132, 0.15); /* Mor temalı gölge */
+    border: 1px solid #4e2a84; /* Mor kenarlık belirsin */
+}
+
+
+.exp-ies {
     background: linear-gradient(135deg, #6f42c1, #4e2a84); 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    color: white; /* Mor arka planda yazılar beyaz olsun */
 }
 
 
@@ -126,3 +146,4 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
         display: flex;
     }
 }
+
