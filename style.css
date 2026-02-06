@@ -336,33 +336,28 @@ footer p { opacity: 0.6; font-size: 0.9rem; }
     color: #666;
     font-weight: 500;
 }
-/* Gönüllülük Fotoğraf Galerisi */
+/* Gönüllülük Fotoğraf Galerisi - Revize */
 .vol-gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* İki fotoğrafı yan yana koyar */
-    gap: 15px;
+    display: flex; /* Daha esnek bir yapı için flex kullanıyoruz */
+    justify-content: center;
+    gap: 20px;
     margin-top: 25px;
+    flex-wrap: wrap; /* Küçük ekranlarda otomatik alt alta geçer */
 }
 
 .vol-gallery img {
-    width: 100%;
-    height: 200px; /* Fotoğrafların boyunu eşitler */
-    object-fit: cover; /* Fotoğrafları ezmeden kutuya sığdırır */
+    /* Buradaki genişlik ve yükseklik değerleri fotoğrafları küçültür */
+    width: 300px; 
+    height: 200px; 
+    
+    object-fit: cover; /* Fotoğrafın oranını bozmadan kutuya sığdırır */
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
 }
 
 .vol-gallery img:hover {
-    transform: scale(1.05); /* Üzerine gelince hafif büyüme efekti */
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(111, 66, 193, 0.2);
 }
-
-/* Mobilde fotoğrafların alt alta gelmesi için */
-@media (max-width: 600px) {
-    .vol-gallery {
-        grid-template-columns: 1fr;
-    }
-}
-
-
