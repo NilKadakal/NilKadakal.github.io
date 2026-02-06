@@ -104,47 +104,50 @@ h2::after { content: ''; display: block; width: 60px; height: 4px; background: #
 
 footer { background: #111; color: #fff; text-align: center; padding: 40px; margin-top: 50px; }
 
-/* =========================================
-   MOBİL MENÜ AYARLARI (768px altı)
-   ========================================= */
 @media (max-width: 768px) {
-    /* Hamburger Çizgilerini Göster */
-    .hamburger-icon {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-    
-    .hamburger-icon span {
-        width: 25px;
-        height: 3px;
-        background: #4e2a84; /* Logo renginle uyumlu */
-        border-radius: 2px;
-    }
-
-    /* Menüyü Mobilde Gizli ve Üstten Açılır Yap */
     .nav-links {
         display: none; 
         flex-direction: column;
-        position: absolute;
-        top: 100%;
+        justify-content: center; 
+        align-items: center;    
+        position: fixed;       
+        top: 0;
         left: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 20px 0;
-        text-align: center;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        width: 100vw;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98); 
+        backdrop-filter: blur(15px);
+        z-index: 999;
+        padding: 0;
     }
 
+
     .nav-links li {
+        width: 80%; 
         margin: 10px 0;
     }
 
-    /* Checkbox tıklandığında menüyü aç */
+    .nav-links a {
+        display: block;
+        padding: 15px;
+        background: #f8f5ff; 
+        color: #4e2a84;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        border: 1px solid #eee;
+        transition: all 0.3s ease;
+    }
+
     #menu-bar:checked ~ .nav-links {
         display: flex;
     }
+
+    .hamburger-icon {
+        position: relative;
+        z-index: 1000;
+    }
 }
+
 
 
