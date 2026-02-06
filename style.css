@@ -336,5 +336,33 @@ footer p { opacity: 0.6; font-size: 0.9rem; }
     color: #666;
     font-weight: 500;
 }
+/* Gönüllülük Fotoğraf Galerisi */
+.vol-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* İki fotoğrafı yan yana koyar */
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.vol-gallery img {
+    width: 100%;
+    height: 200px; /* Fotoğrafların boyunu eşitler */
+    object-fit: cover; /* Fotoğrafları ezmeden kutuya sığdırır */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.vol-gallery img:hover {
+    transform: scale(1.05); /* Üzerine gelince hafif büyüme efekti */
+}
+
+/* Mobilde fotoğrafların alt alta gelmesi için */
+@media (max-width: 600px) {
+    .vol-gallery {
+        grid-template-columns: 1fr;
+    }
+}
 
 
