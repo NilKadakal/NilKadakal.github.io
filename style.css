@@ -279,4 +279,61 @@ footer p { opacity: 0.6; font-size: 0.9rem; }
     margin-top: 5px;
     font-weight: 500;
 }
+/* Gönüllülük Bölümü Tasarımı */
+.vol-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.vol-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 5px solid #6f42c1;
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+}
+
+.vol-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.vol-header h3 {
+    margin: 0;
+    color: #4e2a84;
+    font-size: 1.3rem;
+}
+
+.vol-card h4 {
+    margin: 5px 0 15px 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.vol-card ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #666;
+}
+
+.vol-card li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.date {
+    background: #f0f0f0;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+}
 
