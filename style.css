@@ -241,3 +241,42 @@ footer p { opacity: 0.6; font-size: 0.9rem; }
     transform: translateY(-3px);
     box-shadow: 0 4px 10px rgba(111, 66, 193, 0.2);
 }
+/* Diller Bölümü Tasarımı */
+.languages-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.lang-card {
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 4px solid #6f42c1; /* Sabancı moru vurgusu */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.lang-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(111, 66, 193, 0.1);
+}
+
+.lang-name {
+    font-weight: 800;
+    color: #1e1e3c;
+    font-size: 1.1rem;
+}
+
+.lang-level {
+    font-size: 0.9rem;
+    color: #6f42c1;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
