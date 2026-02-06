@@ -6,6 +6,7 @@ Sabancı Üniversitesi'nde Bilgisayar Bilimi ve Mühendisliği öğrencisiyim ve
 Aynı zamanda Sabancı Üniversitesi Endüstri Mühendisliği Topluluğu (IES) Organizasyon Başkanı olarak, büyük ölçekli organizasyonlar ve ekip yönetimi konularında aktif rol alıyorum.
 
 
+
 🛠️ Teknik Yetkinlikler
 
 Programlama Dilleri: Python, C++ 
@@ -14,11 +15,12 @@ Programlama Dilleri: Python, C++
 Web Geliştirme: Django, HTML, CSS 
 
 
-Araçlar & Teknolojiler: Visual Studio, Microsoft 365 Copilot, Excel (Advanced) 
-+1
+Araçlar & Teknolojiler: Visual Studio, Microsoft 365 Copilot, Excel-Word-Powerpoint (Advanced) 
 
 
-Odak Alanları: Veri Bilimi, Yapay Zeka Destekli Karar Mekizmaları, Web Geliştirme 
+
+Odak Alanları: Yazılım, Veri Bilimi, Yapay Zeka Destekli Karar Mekizmaları, Web Geliştirme 
+
 
 
 📈 Deneyim & Projeler
@@ -30,6 +32,7 @@ AI-Driven Decisions in Business: Üç farklı sektördeki AI uygulamalarını an
 IES Sabancı | Başkan: 1.000'den fazla katılımcıya ulaşan kariyer etkinliklerini (IMIS vb.) koordine ediyor, 50 kişilik bir ekibi ve 50+ kurumsal sponsorluk sürecini yönetiyorum.
 
 Sabancı Üniversitesi | Pazarlama ve Kurumsal İletişim: Üniversitenin resmi sosyal medya hesapları için veri içerik üretiyorum.
+
 
 
 🎓 Eğitim & Sertifikalar
@@ -45,6 +48,7 @@ Sertifikalar: * Machine Learning with Python (BTK Akademi)
 Business Analytics with Excel (Johns Hopkins University) 
 
 
+
 🌐 Diller
 
 Türkçe: Ana Dil 
@@ -54,6 +58,7 @@ Türkçe: Ana Dil
 
 
 İtalyanca: Başlangıç Seviyesi (Beginner) 
+
 
 
 📫 Bana Ulaşın
