@@ -1,124 +1,427 @@
 /* =========================================
-   DENEYİM BÖLÜMÜ (ARKA PLAN FOTOĞRAFLI)
-   ========================================= */
+   TEMEL AYARLAR & YUMUŞAK GEÇİŞLER
+   ========================================= */
+html {
+    scroll-behavior: smooth; /* Sayfa içi kaydırmayı yumuşatır */
+}
 
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fcfcfc;
+    overflow-x: hidden;
+}
+
+/* Tüm etkileşimli öğeler için global geçiş efekti */
+a, .btn, .card, .profile-photo {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; padding: 0; }
+
+/* =========================================
+   HEADER & NAVİGASYON (CAM EFEKTİ)
+   ========================================= */
+header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px); /* Arkadaki içeriği bulanıklaştırır */
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { 
+    font-weight: 800; 
+    font-size: 1.4rem; 
+    color: #4e2a84;
+    letter-spacing: -0.5px;
+}
+
+.nav-links { display: flex; gap: 15px; }
+.nav-links a { font-weight: 500; font-size: 0.85rem; }
+.nav-links a:hover { color: #6f42c1; }
+
+/* =========================================
+   HERO BÖLÜMÜ (SABANCI KAMPÜS + GRADIENT)
+   ========================================= */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 160px 20px;
+    /* Mor & Lacivert Gradyan Katmanı + Kampüs Fotoğrafı */
+    background: linear-gradient(
+        135deg, 
+        rgba(111, 66, 193, 0.8), 
+        rgba(30, 30, 60, 0.85)
+    ), 
+    url('kampus.jpg'); /* Fotoğraf dosya adın */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax efekti */
+    color: #fff;
+    animation: fadeInUp 1s ease-out;
+}
+
+.profile-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255,255,255,0.8);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    margin-bottom: 25px;
+}
+
+.profile-photo:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 750px;
+    margin: 0 auto;
+    opacity: 0.95;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #6f42c1, #4e2a84);
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 50px;
+    margin-top: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 20px rgba(111, 66, 193, 0.4);
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(111, 66, 193, 0.5);
+}
+
+/* =========================================
+   İÇERİK ALANLARI (HAKKIMDA & PROJELER)
+   ========================================= */
+.container {
+    padding: 90px 8%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #6f42c1;
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+/* Proje Kartları */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+.card {
+    background: #fff;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.03);
+    border: 1px solid #f0f0f0;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 40px rgba(111, 66, 193, 0.15);
+    border-bottom: 5px solid #6f42c1;
+}
+
+.card h3 { color: #1e1e3c; margin-top: 0; font-size: 1.4rem; }
+.card p { color: #666; font-size: 0.95rem; }
+
+/* =========================================
+   FOOTER (PROFESYONEL KARANLIK TEMA)
+   ========================================= */
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+footer p { opacity: 0.6; font-size: 0.9rem; }
+
+.socials { margin-top: 25px; }
+
+.socials a {
+    margin: 0 15px;
+    color: #aaa;
+    font-weight: 600;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.socials a:hover {
+    color: #fff;
+}
+
+.socials a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #6f42c1;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+}
+
+.socials a:hover::after { width: 100%; }
+
+/* Yetenekler Bölümü Tasarımı */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skills-grid span {
+    background: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4e2a84;
+    transition: all 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+.skills-grid span:hover {
+    background: #6f42c1;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(111, 66, 193, 0.2);
+}
+/* Diller Bölümü Tasarımı */
+.languages-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.lang-card {
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 4px solid #6f42c1; /* Sabancı moru vurgusu */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.lang-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(111, 66, 193, 0.1);
+}
+
+.lang-name {
+    font-weight: 800;
+    color: #1e1e3c;
+    font-size: 1.1rem;
+}
+
+.lang-level {
+    font-size: 0.9rem;
+    color: #6f42c1;
+    margin-top: 5px;
+    font-weight: 500;
+}
+/* Gönüllülük Bölümü Tasarımı */
+.vol-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.vol-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 5px solid #6f42c1;
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+}
+
+.vol-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.vol-header h3 {
+    margin: 0;
+    color: #4e2a84;
+    font-size: 1.3rem;
+}
+
+.vol-card h4 {
+    margin: 5px 0 15px 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.vol-card ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #666;
+}
+
+.vol-card li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.date {
+    background: #f0f0f0;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+}
+/* Gönüllülük Fotoğraf Galerisi - Revize */
+.vol-gallery {
+    display: flex; /* Daha esnek bir yapı için flex kullanıyoruz */
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+    flex-wrap: wrap; /* Küçük ekranlarda otomatik alt alta geçer */
+}
+
+.vol-gallery img {
+    /* Buradaki genişlik ve yükseklik değerleri fotoğrafları küçültür */
+    width: 300px; 
+    height: 200px; 
+    
+    object-fit: cover; /* Fotoğrafın oranını bozmadan kutuya sığdırır */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.vol-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(111, 66, 193, 0.2);
+}
+/* Deneyim Bölümü Tasarımı */
 .exp-timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
 }
 
 .exp-card {
-    position: relative;
-    border-radius: 18px;
-    overflow: hidden; /* Fotoğrafın köşelerden taşmasını engeller */
-    min-height: 280px;
-    display: flex;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    border: none;
-    transition: all 0.5s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 5px solid #6f42c1; /* Sabancı moru vurgusu */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
 }
 
-/* Fotoğrafın üzerindeki koyu katman (Okunabilirliği sağlayan sihirli dokunuş) */
-.exp-card::before {
-    content: "";
-    position: absolute;
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%;
-    /* Soldan sağa doğru kararan gradyan: Yazıların olduğu taraf daha koyu */
-    background: linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 100%);
-    z-index: 1;
-    transition: background 0.4s ease;
-}
-
-/* İçerik Yazıları (Katmanın üstünde durması için z-index) */
-.exp-content {
-    position: relative;
-    z-index: 2;
-    padding: 40px;
-    color: #fff; /* Tüm yazılar beyaz */
-    width: 100%;
+.exp-card:hover {
+    transform: translateX(10px); /* Sağa doğru hafif kayma efekti */
+    box-shadow: 0 8px 25px rgba(111, 66, 193, 0.1);
 }
 
 .exp-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
 }
 
 .exp-header h3 {
-    margin: 0;
-    font-size: 1.6rem;
-    color: #fff; /* Başlık beyaz */
-}
-
-.exp-header .date {
-    background: rgba(255, 255, 255, 0.15); /* Şeffaf beyaz kutucuk */
-    color: #fff;
-    padding: 5px 15px;
-    border-radius: 20px;
-    backdrop-filter: blur(5px);
-    font-size: 0.85rem;
+    margin: 0;
+    font-size: 1.4rem;
+    color: #1e1e3c;
 }
 
 .role {
-    font-weight: 800;
-    color: #b192ef !important; /* Açık mor vurgu rengi */
-    margin-bottom: 15px;
-    font-size: 1.15rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-weight: 700;
+    color: #6f42c1;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
 }
 
 .exp-card ul {
-    list-style: none; /* Noktaları kaldırıp daha temiz bir görünüm sağlıyoruz */
-    padding: 0;
+    list-style: disc;
+    padding-left: 20px;
+    color: #555;
 }
 
 .exp-card li {
-    margin-bottom: 10px;
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.9);
-    position: relative;
-    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+/* Başkanlık Rolü İçin Özel Vurgu */
+.exp-card.highlight {
+    border-left: 5px solid #4e2a84; /* Daha koyu ve belirgin bir mor */
+    background: linear-gradient(to right, #ffffff, #fdfbff); /* Hafif bir derinlik geçişi */
 }
 
-/* Liste maddelerinin önüne küçük mor noktalar */
-.exp-card li::before {
-    content: "•";
-    color: #b192ef;
-    position: absolute;
-    left: 0;
-    font-weight: bold;
+.exp-card.highlight:hover {
+    border-left-width: 8px; /* Üzerine gelince çizgi kalınlaşır */
+    transform: translateX(15px);
 }
-
-/* ÖZEL ARKA PLANLAR (Fotoğraf isimlerini Mac'te buna göre düzenle) */
-.exp-ies { background-image: url('ies-bg.jpg'); }
-.exp-fin { background-image: url('fin-bg.jpg'); }
-.exp-sos { background-image: url('sosyal-bg.jpg'); }
-.exp-kant { background-image: url('kant-bg.jpg'); }
-
-/* HOVER EFEKTLERİ */
-.exp-card:hover {
-    transform: scale(1.02); /* Hafif büyüme */
-    box-shadow: 0 15px 40px rgba(111, 66, 193, 0.3);
-}
-
-.exp-card:hover::before {
-    /* Üzerine gelince hafif mor bir ton ekler */
-    background: linear-gradient(90deg, rgba(78, 42, 132, 0.9) 0%, rgba(0,0,0,0.5) 100%);
-}
-
-/* Deneyim Arka Planları */
-.exp-ies { background-image: url('IES.jpg'); }
-.exp-fin { background-image: url('fin.jpg.png'); }
-.exp-sos { background-image: url('sos.jpg'); }
-.exp-kant { background-image: url('kant.jpg'); }
+  bu kodu nasıl düzenlicem bu yeni fotoğraflarla
