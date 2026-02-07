@@ -133,52 +133,43 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
     }
 }
 
+/* Proje Alanının Genel Düzeni */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: 1fr; /* Mobilde tek sütun */
     gap: 25px;
     margin-top: 30px;
 }
 
-.project-card:nth-child(3) {
-    grid-column: 1 / span 2; /* Önce tüm satırı kaplamasını sağla */
-    justify-self: center;    /* Sonra içeriği yatayda ortala */
-    width: 50%;              /* Diğer kartlarla aynı boyutta kalması için */
-}
-
-@media (max-width: 768px) {
+/* Masaüstü Ekranlar İçin (Genişlik 768px'den büyükse) */
+@media (min-width: 768px) {
     .project-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr); /* Yan yana tam 2 eşit sütun */
     }
-    .project-card:nth-child(3) {
-        grid-column: span 1;
-        width: 100%;
+
+    /* Eğer en baştaki AI projenin en üstte tek başına ve tam genişlikte durmasını istersen */
+    .project-card.featured {
+        grid-column: 1 / -1; /* İlk satırı boydan boya kaplar */
     }
 }
 
+/* Kartların Kendi İç Düzeni */
 .project-card {
     background: #ffffff;
     border-radius: 20px;
-    padding: 25px;
-    border: 1px solid #e0e0e0;
-    transition: all 0.3s ease;
+    padding: 30px;
+    border: 1px solid #f0f0f0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.project-card.featured {
-    grid-column: span 2;
-    background: linear-gradient(145deg, #ffffff, #f3f0ff);
-    border: 1px solid #dcd3ff;
+    min-height: 220px; /* Kart boylarını eşitlemek için */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(78, 42, 132, 0.1);
-    border-color: #4e2a84;
+    box-shadow: 0 10px 30px rgba(78, 42, 132, 0.08);
 }
-
 .tag {
     font-size: 0.7rem;
     font-weight: 700;
@@ -194,6 +185,7 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
     font-size: 0.8rem;
     margin-right: 5px;
 }
+
 
 
 
