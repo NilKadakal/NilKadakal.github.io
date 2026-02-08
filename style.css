@@ -108,14 +108,17 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
         width: 100vw;
         position: fixed;
         top: 0;
-        left: 0
+        left: 0; 
         display: none; 
         flex-direction: column;
         justify-content: center; 
         align-items: center;
+        z-index: 999; 
     }
 
-    nav-links li { margin: 15px 0; }
+    .nav-links li { 
+        margin: 15px 0; 
+    }
 
     .nav-links a {
         font-size: 1.4rem;
@@ -128,32 +131,29 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
     }
 
     .hamburger-icon {
+        display: block; 
         position: relative;
         z-index: 1000;
     }
 }
 
-/* Proje Alanının Genel Düzeni */
 .project-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Mobilde tek sütun */
+    grid-template-columns: 1fr; 
     gap: 25px;
     margin-top: 30px;
 }
 
-/* Masaüstü Ekranlar İçin (Genişlik 768px'den büyükse) */
 @media (min-width: 768px) {
     .project-grid {
-        grid-template-columns: repeat(2, 1fr); /* Yan yana tam 2 eşit sütun */
+        grid-template-columns: repeat(2, 1fr); 
     }
 
-    /* Eğer en baştaki AI projenin en üstte tek başına ve tam genişlikte durmasını istersen */
+   
     .project-card.featured {
-        grid-column: 1 / -1; /* İlk satırı boydan boya kaplar */
+        grid-column: 1 / -1; 
     }
 }
-
-/* Kartların Kendi İç Düzeni */
 .project-card {
     background: #ffffff;
     border-radius: 20px;
@@ -162,7 +162,7 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 220px; /* Kart boylarını eşitlemek için */
+    min-height: 220px; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -185,6 +185,7 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
     font-size: 0.8rem;
     margin-right: 5px;
 }
+
 
 
 
