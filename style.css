@@ -214,22 +214,22 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
 
 .project-link {
   display: inline-block;
-  margin-top: 15px;
-  padding: 8px 16px;
-  background-color: #6e45e2; 
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 14px;
-  transition: background 0.3s;
+  padding: 8px 20px;
+  border: 2px solid #6e45e2;
+  border-radius: 25px;
+  margin: 15px 0;
+  transition: all 0.3s ease;
 }
 
 .project-link:hover {
-  background-color: #5835bc;
+  background-color: #6e45e2;
+  color: white;
 }
-
-
-
+.project-tags {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px; 
+}
 
 
 
