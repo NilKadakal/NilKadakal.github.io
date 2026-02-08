@@ -8,8 +8,8 @@ section {
     scroll-margin-top: 80px; 
 }
 header {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(12px);
     padding: 1rem 5%; 
     display: flex; 
     justify-content: space-between; 
@@ -23,11 +23,33 @@ header {
 #menu-bar { display: none; }
 .hamburger-icon { display: none; cursor: pointer; }
 
-.nav-links { display: flex; gap: 15px; }
+.nav-links { display: flex; gap: 12px; align-items: center; }
 .logo { font-weight: 800; font-size: 1.4rem; color: #4e2a84; }
-.nav-links { display: flex; gap: 15px; }
-.nav-links a { font-weight: 500; font-size: 0.85rem; }
-.nav-links a:hover { color: #6f42c1; }
+.nav-links a {
+    padding: 10px 18px;
+    border-radius: 12px; 
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #4e2a84; 
+    background: #f4f0ff; 
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: #4e2a84; 
+    color: #ffffff; 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 12px rgba(78, 42, 132, 0.2);
+}
+.nav-links a[href*="iletisim"] {
+    background: #4e2a84;
+    color: white;
+}
+
+.nav-links a[href*="iletisim"]:hover {
+    background: #6f42c1;
+}
 
 .hero {
     position: relative; text-align: center; padding: 160px 20px;
@@ -185,6 +207,7 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
     font-size: 0.8rem;
     margin-right: 5px;
 }
+
 
 
 
