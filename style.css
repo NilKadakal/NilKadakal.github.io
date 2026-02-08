@@ -212,6 +212,21 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
     margin-right: 5px;
 }
 
+.project-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #6e45e2; 
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.project-link:hover {
+  background-color: #5835bc;
+}
 
 
 
