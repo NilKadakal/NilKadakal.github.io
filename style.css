@@ -23,24 +23,27 @@ header {
 #menu-bar { display: none; }
 .hamburger-icon { display: none; cursor: pointer; }
 
-.nav-links { display: flex; gap: 12px; align-items: center; }
+.nav-links { display: flex; gap: 15px; align-items: center; }
 .logo { font-weight: 800; font-size: 1.4rem; color: #4e2a84; }
 .nav-links a {
-    padding: 10px 18px;
-    border-radius: 12px; 
+    background: linear-gradient(90deg, #6f42c1, #4e2a84); 
+    color: #ffffff; 
+    padding: 10px 22px;
+    border-radius: 30px; 
     font-weight: 600;
-    font-size: 0.9rem;
-    color: #4e2a84; 
-    background: #f4f0ff; 
-    border: 1px solid transparent;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 10px rgba(78, 42, 132, 0.2); 
     transition: all 0.3s ease;
+    border: none;
 }
 
 .nav-links a:hover {
-    background: #4e2a84; 
-    color: #ffffff; 
-    transform: translateY(-2px); 
-    box-shadow: 0 4px 12px rgba(78, 42, 132, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(78, 42, 132, 0.4); 
+    filter: brightness(1.1); 
+}
+.nav-links a:active {
+    transform: translateY(-1px);
 }
 .nav-links a[href*="iletisim"] {
     background: #4e2a84;
@@ -133,6 +136,7 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
         left: 0; 
         display: none; 
         flex-direction: column;
+        width: auto;
         justify-content: center; 
         align-items: center;
         z-index: 999; 
@@ -207,6 +211,7 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
     font-size: 0.8rem;
     margin-right: 5px;
 }
+
 
 
 
