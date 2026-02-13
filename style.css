@@ -347,3 +347,39 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
     max-height: 85vh;
     border: 3px solid rgba(255,255,255,0.1);
 }
+
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    
+    .project-card {
+        padding: 15px;
+    }
+
+   
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .prev, .next {
+        padding: 10px;
+        font-size: 20px;
+        background-color: rgba(0, 0, 0, 0.6); 
+    }
+
+    .modal-content {
+        width: 95%;
+        margin-top: 20%;
+    }
+}
+@media (max-width: 480px) {
+    .project-screenshots img {
+        width: 200px; 
+        height: 120px;
+    }
+}
