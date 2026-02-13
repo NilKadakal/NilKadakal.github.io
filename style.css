@@ -337,3 +337,35 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
 .close:hover {
     color: #6a49ad; 
 }
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+.next {
+    right: 5%;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 5%;
+}
+
+.prev:hover, .next:hover {
+    background-color: #6a49ad; 
+}
+@media only screen and (max-width: 700px){
+    .prev, .next { font-size: 20px; }
+}
