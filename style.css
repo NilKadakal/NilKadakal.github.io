@@ -250,6 +250,36 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
         grid-template-columns: 1fr;
     }
 }
+.project-screenshots {
+    display: flex;
+    gap: 10px; 
+    margin: 15px 0;
+    overflow-x: auto; 
+    padding-bottom: 5px;
+}
+
+.project-screenshots img {
+    width: 100px; 
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid #eee;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.project-screenshots img:hover {
+    transform: scale(1.1);
+    border-color: #6a49ad; 
+}
+
+.project-screenshots::-webkit-scrollbar {
+    height: 5px;
+}
+.project-screenshots::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
 
 
 
