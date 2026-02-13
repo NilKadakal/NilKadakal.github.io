@@ -410,3 +410,66 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
         height: auto;
     }
 }
+
+@media screen and (max-width: 768px) {
+    
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        position: relative;
+    }
+
+   
+    .container, section, header {
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    
+    .projects-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+    }
+
+  
+    .project-card {
+        width: 100% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+    }
+
+    
+    .experience-card, .about-content, .featured {
+        width: 100% !important;
+        flex-direction: column !important;
+        padding: 20px !important;
+    }
+    
+    .project-screenshots {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 10px !important;
+        padding-bottom: 10px !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .project-screenshots img {
+        width: 180px !important; 
+        flex-shrink: 0 !important;
+    }
+
+  
+    .modal-content {
+        width: 90% !important;
+        height: auto !important;
+    }
+
+    .prev, .next {
+        padding: 10px !important;
+        font-size: 20px !important;
+    }
+}
