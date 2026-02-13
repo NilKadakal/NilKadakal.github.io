@@ -216,19 +216,25 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
 }
 
 .project-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #6e45e2;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
+    background-color: #6a49ad; 
+    color: white !important; 
+    padding: 12px 28px; 
+    border-radius: 50px; 
+    text-decoration: none; 
     font-weight: 500;
-    margin-top: 15px;    
-    margin-bottom: 25px; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 14px;
+    margin-top: 15px;
 }
+
 .project-link:hover {
-  background-color: #6e45e2;
-  color: white;
+    background-color: #553991; 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 12px rgba(106, 73, 173, 0.3);
 }
 .project-tags {
     margin-top: 10px; 
@@ -253,6 +259,7 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
 .akademik-buton:hover {
     background-color: #4b328a; 
 }
+
 
 
 
