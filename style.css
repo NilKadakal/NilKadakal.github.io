@@ -237,7 +237,22 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
     gap: 8px;
 }
 
-
+.akademik-buton { 
+    background-color: #6343a7; 
+    color: white;
+    padding: 12px 25px; 
+    border: none;
+    border-radius: 50px; 
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+.akademik-buton:hover {
+    background-color: #4b328a; 
+}
 
 
 
