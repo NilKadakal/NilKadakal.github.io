@@ -215,30 +215,48 @@
 </footer>
     <div id="imageModal" class="modal">
       <span class="close">&times;</span>
+      <a class="prev" onclick="changeImage(-1)">&#10094;</a>
       <img class="modal-content" id="fullImage">
-    </div>
+      <a class="next" onclick="changeImage(1)">&#10095;</a>
+   </div>
     <script>
+    let currentImageIndex = 0;
+    const images = ["Ekran1.png", "Ekran2.png", "Ekran3.png"]; 
+
     function openModal(src) {
-       const modal = document.getElementById("imageModal");
-       const modalImg = document.getElementById("fullImage");
-       modal.style.display = "block";
-       modalImg.src = src;
-}
-
-
-document.querySelector(".close").onclick = function() {
-    document.getElementById("imageModal").style.display = "none";
-}
-window.onclick = function(event) {
-    const modal = document.getElementById("imageModal");
-    if (event.target == modal) {
-        modal.style.display = "none";
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("fullImage");
+      modal.style.display = "block";
+      modalImg.src = src;
+    
+      currentImageIndex = images.indexOf(src.split('/').pop());
     }
-}
-</script>
+
+    function changeImage(n) {
+      currentImageIndex += n;
+      if (currentImageIndex >= images.length) { currentImageIndex = 0; }
+      if (currentImageIndex < 0) { currentImageIndex = images.length - 1; }
+
+      const modalImg = document.getElementById("fullImage");
+      modalImg.src = images[currentImageIndex];
+    }
+
+    document.querySelector(".close").onclick = function() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+
+    document.onkeydown = function(e) {
+      if (document.getElementById("imageModal").style.display === "block") {
+        if (e.key === "ArrowLeft") changeImage(-1);
+        if (e.key === "ArrowRight") changeImage(1);
+        if (e.key === "Escape") document.getElementById("imageModal").style.display = "none";
+    }
+   };
+   </script>
 </body>
 
 </html>
+
 
 
 
