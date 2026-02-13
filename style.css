@@ -250,37 +250,36 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
         grid-template-columns: 1fr;
     }
 }
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
 .project-screenshots {
     display: flex;
-    gap: 12px; 
-    margin: 20px 0;
+    gap: 15px;
     overflow-x: auto; 
-    padding: 10px 5px;
-    /* Mobilde kaydırmayı kolaylaştırır */
-    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory; 
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch; 
 }
 
 .project-screenshots img {
-    /* Görsellerin kart içinde daha belirgin olması için boyutu artırdık */
-    width: 140px; 
-    height: 90px;
+    width: 250px; 
+    height: 160px;
     object-fit: cover;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 2px solid #f0f0f0;
-    transition: all 0.3s ease;
-    flex-shrink: 0; /* Resimlerin büzülmesini engeller */
+    border-radius: 12px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
 }
 
-.project-screenshots img:hover {
-    transform: translateY(-5px); /* Daha şık bir yükselme efekti */
-    border-color: #6a49ad; 
-    box-shadow: 0 5px 15px rgba(106, 73, 173, 0.2);
-}
-
-/* Kaydırma çubuğu tasarımı */
 .project-screenshots::-webkit-scrollbar {
-    height: 6px;
+    height: 4px;
 }
 
 .project-screenshots::-webkit-scrollbar-track {
@@ -289,6 +288,11 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
 }
 
 .project-screenshots::-webkit-scrollbar-thumb {
-    background: #6a49ad; /* Çubuğu da markanla uyumlu mor yaptık */
+    background: #6a49ad; 
     border-radius: 10px;
+}
+
+.project-screenshots img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
