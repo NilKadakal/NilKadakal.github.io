@@ -252,36 +252,43 @@ footer { background: #111; color: #fff; text-align: center; padding: 40px; margi
 }
 .project-screenshots {
     display: flex;
-    gap: 10px; 
-    margin: 15px 0;
+    gap: 12px; 
+    margin: 20px 0;
     overflow-x: auto; 
-    padding-bottom: 5px;
+    padding: 10px 5px;
+    /* Mobilde kaydırmayı kolaylaştırır */
+    -webkit-overflow-scrolling: touch;
 }
 
 .project-screenshots img {
-    width: 100px; 
-    height: 70px;
+    /* Görsellerin kart içinde daha belirgin olması için boyutu artırdık */
+    width: 140px; 
+    height: 90px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    border: 2px solid #eee;
-    transition: transform 0.2s, border-color 0.2s;
+    border: 2px solid #f0f0f0;
+    transition: all 0.3s ease;
+    flex-shrink: 0; /* Resimlerin büzülmesini engeller */
 }
 
 .project-screenshots img:hover {
-    transform: scale(1.1);
+    transform: translateY(-5px); /* Daha şık bir yükselme efekti */
     border-color: #6a49ad; 
+    box-shadow: 0 5px 15px rgba(106, 73, 173, 0.2);
 }
 
+/* Kaydırma çubuğu tasarımı */
 .project-screenshots::-webkit-scrollbar {
-    height: 5px;
+    height: 6px;
 }
-.project-screenshots::-webkit-scrollbar-thumb {
-    background: #ccc;
+
+.project-screenshots::-webkit-scrollbar-track {
+    background: #f1f1f1;
     border-radius: 10px;
 }
 
-
-
-
-
+.project-screenshots::-webkit-scrollbar-thumb {
+    background: #6a49ad; /* Çubuğu da markanla uyumlu mor yaptık */
+    border-radius: 10px;
+}
