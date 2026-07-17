@@ -10,7 +10,7 @@
   const typedOutput = document.getElementById('typed-output');
   const canvas = document.getElementById('code-background');
 
-  year.textContent = String(new Date().getFullYear());
+  if (year) year.textContent = String(new Date().getFullYear());
 
   const closeMenu = () => {
     navLinks.classList.remove('open');
@@ -102,7 +102,7 @@
   }
 
   const motionReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!canvas) return;
+  if (!canvas || motionReduced) return;
 
   const context = canvas.getContext('2d', { alpha: true });
   const snippets = [
@@ -121,7 +121,18 @@
     'docker compose up',
     'pytest -q',
     'from data import insight',
-    'if (problem) understand();'
+    'if (problem) understand();',
+    'rag.answer(question)',
+    'feature_engineering += 1',
+    'await fetch("/api/projects")',
+    'class ProductMindset extends Builder {}',
+    'const result = iterate(v1, feedback);'
+  ];
+
+  const palette = [
+    [158, 240, 197],
+    [139, 188, 255],
+    [255, 189, 138]
   ];
 
   let width = 0;
@@ -138,29 +149,29 @@
 
     reset(initial = false) {
       this.text = snippets[Math.floor(Math.random() * snippets.length)];
-      this.size = Math.random() * 3 + 9;
-      this.speed = Math.random() * 9 + 5;
-      this.opacity = Math.random() * 0.13 + 0.075;
+      this.color = palette[Math.floor(Math.random() * palette.length)];
+      this.size = Math.random() * 5 + 11;
+      this.speed = Math.random() * 10 + 8;
+      this.opacity = Math.random() * 0.15 + 0.08;
       this.x = Math.random() * width;
-      this.y = initial ? Math.random() * height : height + Math.random() * 120;
-      this.drift = (Math.random() - 0.5) * 4;
+      this.y = initial ? Math.random() * height : height + Math.random() * 180;
+      this.drift = (Math.random() - 0.5) * 8;
       this.width = 0;
     }
 
     update(delta) {
-      const motionScale = motionReduced ? 0.18 : 1;
-      this.y -= this.speed * delta * motionScale;
-      this.x += this.drift * delta * motionScale;
-      if (this.y < -35 || this.x < -420 || this.x > width + 80) this.reset(false);
+      this.y -= this.speed * delta;
+      this.x += this.drift * delta;
+      if (this.y < -40 || this.x < -460 || this.x > width + 120) this.reset(false);
     }
 
     draw() {
       context.font = `500 ${this.size}px IBM Plex Mono, monospace`;
-      const tint = this.text.includes('git') || this.text.includes('npm') || this.text.includes('docker')
-        ? `rgba(139, 188, 255, ${this.opacity * 0.92})`
-        : `rgba(158, 240, 197, ${this.opacity})`;
-      context.fillStyle = tint;
+      context.shadowBlur = 14;
+      context.shadowColor = `rgba(${this.color[0]}, ${this.color[1]}, ${this.color[2]}, ${Math.min(this.opacity + 0.08, 0.28)})`;
+      context.fillStyle = `rgba(${this.color[0]}, ${this.color[1]}, ${this.color[2]}, ${this.opacity})`;
       context.fillText(this.text, this.x, this.y);
+      context.shadowBlur = 0;
       this.width = context.measureText(this.text).width;
     }
   }
@@ -175,7 +186,7 @@
     canvas.style.height = `${height}px`;
     context.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-    const count = Math.max(26, Math.min(56, Math.floor((width * height) / 32000)));
+    const count = Math.max(34, Math.min(78, Math.floor((width * height) / 26000)));
     particles = Array.from({ length: count }, () => new CodeParticle(true));
   };
 
@@ -188,9 +199,9 @@
         const dy = a.y - b.y;
         const distance = Math.hypot(dx, dy);
 
-        if (distance < 135) {
-          context.strokeStyle = `rgba(139, 188, 255, ${(1 - distance / 135) * 0.025})`;
-          context.lineWidth = 0.6;
+        if (distance < 170) {
+          context.strokeStyle = `rgba(139, 188, 255, ${(1 - distance / 170) * 0.075})`;
+          context.lineWidth = 0.8;
           context.beginPath();
           context.moveTo(a.x, a.y - 4);
           context.lineTo(b.x, b.y - 4);
