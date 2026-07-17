@@ -1,69 +1,24 @@
-🚀 Merhaba, Ben Nil Kadakal!
+# Nil Kadakal Portfolio
 
-Sabancı Üniversitesi'nde Bilgisayar Bilimi ve Mühendisliği öğrencisiyim ve İş Analitiği üzerine yan dal yapıyorum. Yazılım geliştirme, veri analizi ve yapay zeka teknolojileriyle operasyonel verimliliği artırmaya odaklanıyorum.
-+1
+A framework-free personal portfolio built with semantic HTML, modern CSS and vanilla JavaScript.
 
-Aynı zamanda Sabancı Üniversitesi Endüstri Mühendisliği Topluluğu (IES) Organizasyon Başkanı olarak, büyük ölçekli organizasyonlar ve ekip yönetimi konularında aktif rol alıyorum.
+## Files
 
+- `index.html` — page structure and content
+- `style.css` — layout, visual system and responsive styles
+- `script.js` — animated code background, mobile navigation, typing effect and scroll reveals
+- `assets/favicon.svg` — site icon
+- `assets/profile-placeholder.svg` — optional placeholder asset
 
+## Publish on GitHub Pages
 
-🛠️ Teknik Yetkinlikler
+1. Replace the files in your `nilkadakal.github.io` repository with this folder's contents.
+2. Keep your existing `nil.JPG` file in the repository root if you want to use it later for social previews.
+3. Commit and push to the default branch.
+4. GitHub Pages will redeploy the site automatically.
 
-Programlama Dilleri: Python, C++ 
+## Editing content
 
+All visible content is in `index.html`. Project links, experience descriptions, email, LinkedIn and GitHub URLs can be edited directly there.
 
-Web Geliştirme: Django, HTML, CSS 
-
-
-Araçlar & Teknolojiler: Visual Studio, Microsoft 365 Copilot, Excel-Word-Powerpoint (Advanced) 
-
-
-
-Odak Alanları: Yazılım, Veri Bilimi, Yapay Zeka Destekli Karar Mekizmaları, Web Geliştirme 
-
-
-
-📈 Deneyim & Projeler
-Finnovation Software Solutions | Yazılım Stajyeri: Django framework kullanarak kurumsal web sitesinin modernizasyonunu gerçekleştirdim ve Agile süreçlerde yer aldım.
-
-
-AI-Driven Decisions in Business: Üç farklı sektördeki AI uygulamalarını analiz ederek operasyonel maliyetlerde %30 azalma sağlayan stratejiler üzerine çalıştım.
-
-IES Sabancı | Başkan: 1.000'den fazla katılımcıya ulaşan kariyer etkinliklerini (IMIS vb.) koordine ediyor, 50 kişilik bir ekibi ve 50+ kurumsal sponsorluk sürecini yönetiyorum.
-
-Sabancı Üniversitesi | Pazarlama ve Kurumsal İletişim: Üniversitenin resmi sosyal medya hesapları için veri içerik üretiyorum.
-
-
-
-🎓 Eğitim & Sertifikalar
-
-Lisans: Sabancı Üniversitesi - Bilgisayar Bilimi ve Mühendisliği (Yan Dal: İş Analitiği) 
-
-
-Başarılar: YKS Sayısal Türkiye 9.284.'lüğü (%0.5'lik dilim), Honor Dean's List 
-
-
-Sertifikalar: * Machine Learning with Python (BTK Akademi) 
-
-Business Analytics with Excel (Johns Hopkins University) 
-
-
-
-🌐 Diller
-
-Türkçe: Ana Dil 
-
-
-İngilizce: İleri Seviye (Advanced) 
-
-
-İtalyanca: Başlangıç Seviyesi (Beginner) 
-
-
-
-📫 Bana Ulaşın
-
-E-posta: nilkadakal01@gmail.com 
-
-
-LinkedIn: Nil Kadakal
+The animated background is configured in `script.js` under the `snippets` array. Animation is automatically disabled for users who prefer reduced motion.
