@@ -102,7 +102,7 @@
   }
 
   const motionReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!canvas || motionReduced) return;
+  if (!canvas) return;
 
   const context = canvas.getContext('2d', { alpha: true });
   const snippets = [
@@ -139,8 +139,8 @@
     reset(initial = false) {
       this.text = snippets[Math.floor(Math.random() * snippets.length)];
       this.size = Math.random() * 3 + 9;
-      this.speed = Math.random() * 7 + 4;
-      this.opacity = Math.random() * 0.12 + 0.035;
+      this.speed = Math.random() * 9 + 5;
+      this.opacity = Math.random() * 0.13 + 0.075;
       this.x = Math.random() * width;
       this.y = initial ? Math.random() * height : height + Math.random() * 120;
       this.drift = (Math.random() - 0.5) * 4;
@@ -148,14 +148,18 @@
     }
 
     update(delta) {
-      this.y -= this.speed * delta;
-      this.x += this.drift * delta;
+      const motionScale = motionReduced ? 0.18 : 1;
+      this.y -= this.speed * delta * motionScale;
+      this.x += this.drift * delta * motionScale;
       if (this.y < -35 || this.x < -420 || this.x > width + 80) this.reset(false);
     }
 
     draw() {
       context.font = `500 ${this.size}px IBM Plex Mono, monospace`;
-      context.fillStyle = `rgba(158, 240, 197, ${this.opacity})`;
+      const tint = this.text.includes('git') || this.text.includes('npm') || this.text.includes('docker')
+        ? `rgba(139, 188, 255, ${this.opacity * 0.92})`
+        : `rgba(158, 240, 197, ${this.opacity})`;
+      context.fillStyle = tint;
       context.fillText(this.text, this.x, this.y);
       this.width = context.measureText(this.text).width;
     }
@@ -171,7 +175,7 @@
     canvas.style.height = `${height}px`;
     context.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-    const count = Math.max(20, Math.min(48, Math.floor((width * height) / 38000)));
+    const count = Math.max(26, Math.min(56, Math.floor((width * height) / 32000)));
     particles = Array.from({ length: count }, () => new CodeParticle(true));
   };
 
