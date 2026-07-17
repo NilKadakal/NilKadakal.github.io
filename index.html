@@ -1,310 +1,366 @@
-<!DOCTYPE html>
-<html lang="tr">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Nil Kadakal | Bilgisayar Mühendisliği Öğrencisi</title>
-    <meta name="description" content="Nil Kadakal'ın kişisel web sitesi. Sabancı Üniversitesi Bilgisayar Bilimi ve Mühendisliği öğrencisi.">
-    <title>Nil - Portfolyo</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d10">
+
+  <title>Nil Kadakal — Software, Data & AI</title>
+  <meta name="description" content="Portfolio of Nil Kadakal, a Computer Science and Engineering student building practical AI systems, data products and backend software.">
+  <link rel="canonical" href="https://nilkadakal.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nilkadakal.github.io/">
+  <meta property="og:title" content="Nil Kadakal — Software, Data & AI">
+  <meta property="og:description" content="Practical AI systems, data products and thoughtful software.">
+  <meta property="og:image" content="https://nilkadakal.github.io/nil.JPG">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nil Kadakal",
+    "url": "https://nilkadakal.github.io/",
+    "image": "https://nilkadakal.github.io/nil.JPG",
+    "jobTitle": "Computer Science and Engineering Student",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Sabancı University"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/nilkadakal/",
+      "https://github.com/NilKadakal"
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <header>
-        <nav>
-    <div class="logo">Nil Kadakal</div>
-    <input type="checkbox" id="menu-bar">
-    <label for="menu-bar" class="hamburger-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
-    
-    <ul class="nav-links">
-        <li><a href="#hakkimda">Hakkımda</a></li>
-        <li><a href="#deneyim">Deneyim</a></li>
-        <li><a href="#projeler">Projeler</a></li>
-        <li><a href="#skills">Yetenekler</a></li>
-        <li><a href="#volunteering">Gönüllülük</a></li>
-        <li><a href="#languages">Diller</a></li>
-        <li><a href="#iletisim">İletişim</a></li>
-    </ul>
-</nav>
-    </header>
+  <canvas id="code-background" aria-hidden="true"></canvas>
+  <div class="background-vignette" aria-hidden="true"></div>
+  <div class="background-noise" aria-hidden="true"></div>
 
-    <main>
-        <section class="hero">
-            <img src="nil.JPG" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" alt="Nil Kadakal">
-            <h1>Merhaba, ben Nil.</h1>
-            <p>Bilgisayar Bilimi ve Mühendisliği öğrencisiyim. Veri bilimi,backend sistemleri ve yapay zeka üzerine çalışıyorum.</p>
-            <a href="#hakkimda" class="btn">O zaman başlayalım</a>
-        </section>
+  <header class="site-header" id="top">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Nil Kadakal home">
+        <span class="brand-mark">NK</span>
+        <span class="brand-name">Nil Kadakal</span>
+      </a>
 
-        <section id="hakkimda" class="container">
-            <h2>Hakkımda</h2>
-            <p>Sabancı Üniversitesi'nde Bilgisayar Bilimi ve Mühendisliği öğrencisiyim ve İş Analitiği üzerine yan dal yapıyorum. Akademik çalışmalarımın yanı sıra, Sabancı Üniversitesi IES Organizasyon Başkanı olarak liderlik ve ekip yönetimi süreçlerini yürütüyorum.</p>
-            <p>Teknik ilgi alanlarım Python, C++ ve Django ile yazılım geliştirmenin yanı sıra veri analitiği ve yapay zeka odaklı projeleri kapsıyor.</p>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Toggle menu</span>
+        <span></span><span></span>
+      </button>
 
-        </section>
-<section id="deneyim" class="container">
-    <h2>Deneyim</h2>
-    <div class="exp-timeline">
-        
-        <div class="exp-card exp-ies">
-            <div class="exp-content">
-                <div class="exp-header">
-                    <h3>Endüstri Mühendisliği Topluluğu (IES)</h3>
-                    <span class="date">Haziran 2025 - Günümüz</span>
-                </div>
-                <p class="role">Organizasyon Başkanı</p>
-                <ul>
-                    <li>1.000+ katılımcılı kariyer etkinlikleri ve 50+ kurumsal sponsorluk yönetimi.</li>
-                    <li>50 kişilik ekibin liderliği ve @iessabanci hesaplarının yönetimi.</li>
-                    <li>IES'e sıfırdan web sitesi kurma.</li>
-                </ul>
-            </div>
+      <div class="nav-links" id="nav-links">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <a class="nav-cta" href="mailto:nilkadakal01@gmail.com">Let’s talk <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> Computer Science & Engineering · Istanbul</p>
+        <h1>I build software that turns complex ideas into <em>useful systems.</em></h1>
+        <p class="hero-intro">I’m Nil — a Computer Science and Engineering student at Sabancı University, focused on practical AI, data products and backend engineering.</p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore selected work <span>↓</span></a>
+          <a class="button button-quiet" href="https://github.com/NilKadakal" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
+          <a class="button button-quiet" href="https://www.linkedin.com/in/nilkadakal/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
         </div>
 
-        <div class="exp-card">
-            <div class="exp-content">
-                <div class="exp-header">
-                    <h3>Finnovation Software Solutions</h3>
-                    <span class="date">Oca 2025 - Şub 2025</span>
-                </div>
-                <p class="role">Stajyer Yazılım Geliştirici</p>
-                <ul>
-                    <li>Django ve Python ile kurumsal web sitesi modernizasyonu.</li>
-                    <li>Ekip içerisinde UX iyileştirmeleri ve frontend geliştirme.</li>
-                </ul>
-            </div>
+        <div class="hero-meta" aria-label="Current profile information">
+          <div>
+            <span>Currently</span>
+            <strong>Akbank</strong>
+            <small>Digital Identity & Open Banking</small>
+          </div>
+          <div>
+            <span>Recent build</span>
+            <strong>Local RAG Assistant</strong>
+            <small>Microsoft AI Innovators</small>
+          </div>
+          <div>
+            <span>Education</span>
+            <strong>Sabancı University</strong>
+            <small>CSE + Business Analytics</small>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-code reveal" aria-label="Developer profile code sample">
+        <div class="code-window">
+          <div class="code-window-header">
+            <div class="window-controls" aria-hidden="true"><i></i><i></i><i></i></div>
+            <span>profile.ts</span>
+            <span class="code-status"><i></i> available</span>
+          </div>
+          <div class="code-content" aria-hidden="true">
+            <div><span class="line-no">01</span><span class="token-keyword">type</span> <span class="token-type">Engineer</span> = {</div>
+            <div><span class="line-no">02</span>&nbsp;&nbsp;<span class="token-property">name</span>: <span class="token-string">"Nil Kadakal"</span>,</div>
+            <div><span class="line-no">03</span>&nbsp;&nbsp;<span class="token-property">focus</span>: [</div>
+            <div><span class="line-no">04</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="token-string">"AI systems"</span>,</div>
+            <div><span class="line-no">05</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="token-string">"data products"</span>,</div>
+            <div><span class="line-no">06</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="token-string">"backend engineering"</span></div>
+            <div><span class="line-no">07</span>&nbsp;&nbsp;],</div>
+            <div><span class="line-no">08</span>&nbsp;&nbsp;<span class="token-property">approach</span>: <span class="token-string">"build → test → refine"</span>,</div>
+            <div><span class="line-no">09</span>&nbsp;&nbsp;<span class="token-property">curious</span>: <span class="token-boolean">true</span></div>
+            <div><span class="line-no">10</span>};</div>
+          </div>
+          <div class="code-output">
+            <span class="prompt">$</span>
+            <span id="typed-output">shipping thoughtful software</span><span class="typing-cursor" aria-hidden="true"></span>
+          </div>
         </div>
 
-        <div class="exp-card">
-            <div class="exp-content">
-                <div class="exp-header">
-                    <h3>Sabancı Üniversitesi</h3>
-                    <span class="date">Eki 2025 - Günümüz</span>
-                </div>
-                <p class="role">Pazarlama ve Kurumsal İletişim Ekibi</p>
-                <ul>
-                    <li>60.000+ takipçili resmi hesaplar için içerik üretimi.</li>
-                </ul>
-            </div>
+        <div class="activity-card">
+          <div class="activity-heading">
+            <span>Working principles</span>
+            <span class="activity-pulse">live</span>
+          </div>
+          <ul>
+            <li><span>01</span><p><strong>Understand the problem</strong><small>before choosing the stack</small></p></li>
+            <li><span>02</span><p><strong>Design for clarity</strong><small>in code, systems and interfaces</small></p></li>
+            <li><span>03</span><p><strong>Measure the outcome</strong><small>and keep improving it</small></p></li>
+          </ul>
         </div>
-
-        <div class="exp-card">
-            <div class="exp-content">
-                <div class="exp-header">
-                    <h3>Kant Akademi</h3>
-                    <span class="date">Nis 2024 - Şub 2026</span>
-                </div>
-                <p class="role">Akademik Koç</p>
-                <ul>
-                    <li>20+ öğrenciye 250'den fazla bire bir mentorluk görüşmesi.</li>
-                    <li>Her hafta düzenli YKS programları hazırlama</li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-</section>
-        <section id="projeler">
-    <h2>Projeler</h2>
-    <div class="projects-grid">
-        
-        <div class="project-card">
-            <span class="tag">Oyun</span>
-            <h3>SpongeBob Adventure</h3>
-            <p>Python/Pygame ile geliştirilen, nesne tabanlı programlama mantığına sahip 2D kaçış oyunu.</p>
-            <div class="project-screenshots">
-                   <img src="Ekran1.png" alt="Oyun Başlangıç" onclick="openModal(this.src)">
-                   <img src="Ekran3.png" alt="Oyun İçi Görünüm" onclick="openModal(this.src)">
-                   <img src="Ekran2.png" alt="Game Over Ekranı"onclick="openModal(this.src)">
-            </div>
-            <div class="tech-stack"><span>Python</span> <span>Pygame</span></div>
-            <a href="https://github.com/NilKadakal/SpongebobAdventureGame" target="_blank" class="project-link">Kodları İncele</a>
-        </div>
-
-        <div class="project-card">
-            <span class="tag">Akademik Araştırma</span>
-            <h3>AI-Driven Decisions in Business</h3>
-            <p>Yapay zeka uygulamalarının iş dünyasındaki stratejik etkileri üzerine akademik makale çalışması.</p>
-            <div class="tech-stack"><span>AI Strategy</span> <span>Ethics</span></div>
-            <a href="https://drive.google.com/drive/folders/1VYIToarX7apKSRON3sWI8NMM_vSjjjyv" target="_blank" class="project-link">Projeyi İncele →</a>
-        </div>
-
-        <div class="project-card">
-            <span class="tag">Backend</span>
-            <h3>Finnovation Web</h3>
-            <p>Django ve Python ile kurumsal web modernizasyonu.</p>
-            <div class="tech-stack"><span>Django</span> <span>Python</span></div>
-    
-        </div>
-
-        <div class="project-card">
-            <span class="tag">Web Design</span>
-            <h3>IES Web Site</h3>
-            <p>Kulübüm için sıfırdan tasarladığım kurumsal platform.</p>
-            <div class="tech-stack"><span>HTML/CSS</span></div>
-            <a href="https://www.ies-club.com" class="project-link" target="_blank">Siteye Git</a>
-        </div>
-
-    </div>
-</section>
-    </main>
-    <section id="skills" class="container">
-    <h2>Yetenekler</h2>
-    <div class="skills-grid">
-        <span>Python </span> <span>C++  </span> <span>Django </span> 
-        <span>HTML </span> <span>CSS </span> <span>Microsoft Office Programs(Excel,Word,PowerPoint) </span> <span>Machine Learning</span>
-    </div>
-        </section> 
-
+      </aside>
     </section>
 
-<section id="volunteering" class="container">
-    <h2>Gönüllülük</h2>
-    <div class="vol-container">
-        <div class="vol-card">
-            <div class="vol-header">
-                <h3>Toplumsal Duyarlılık Projeleri (CIP)</h3>
-                <span class="date">Eyl 2024 - Oca 2025</span>
+    <section class="ticker" aria-label="Technology stack">
+      <div class="ticker-track">
+        <span>Python</span><i>·</i><span>C++</span><i>·</i><span>JavaScript</span><i>·</i><span>Django</span><i>·</i><span>SQLite</span><i>·</i><span>RAG</span><i>·</i><span>scikit-learn</span><i>·</i><span>Pandas</span><i>·</i><span>Git</span><i>·</i>
+        <span aria-hidden="true">Python</span><i aria-hidden="true">·</i><span aria-hidden="true">C++</span><i aria-hidden="true">·</i><span aria-hidden="true">JavaScript</span><i aria-hidden="true">·</i><span aria-hidden="true">Django</span><i aria-hidden="true">·</i><span aria-hidden="true">SQLite</span><i aria-hidden="true">·</i><span aria-hidden="true">RAG</span><i aria-hidden="true">·</i><span aria-hidden="true">scikit-learn</span><i aria-hidden="true">·</i><span aria-hidden="true">Pandas</span><i aria-hidden="true">·</i><span aria-hidden="true">Git</span><i aria-hidden="true">·</i>
+      </div>
+    </section>
+
+    <section class="section shell" id="work">
+      <header class="section-header reveal">
+        <div>
+          <span class="section-number">01 / Selected work</span>
+          <h2>Projects built around real questions, not demo prompts.</h2>
+        </div>
+        <p>Each project starts with a concrete problem and is shaped through system design, implementation, testing and iteration.</p>
+      </header>
+
+      <div class="featured-project reveal">
+        <div class="project-copy">
+          <div class="project-kicker"><span>Featured case study</span><span>AI Systems · 2026</span></div>
+          <h3>Local RAG Assistant</h3>
+          <p class="project-summary">A privacy-minded document assistant that processes PDF, DOCX and TXT files locally, retrieves relevant context with embeddings and produces grounded answers without sending documents to a cloud service.</p>
+
+          <div class="project-details">
+            <div>
+              <span>Problem</span>
+              <p>Make document search and question answering useful without giving up local control of the source material.</p>
             </div>
-            <h4>Cinsiyet ve Cinsel Sağlık Farkındalık Projesi</h4>
-            <ul>
-                <li>Kampüs içi farkındalık etkinlikleri ve eğitim oturumları planlayıp yürüttüm.</li>
-                <li>Öğrenci organizasyonları ve proje koordinatörleriyle iş birliği yaparak sosyal etki odaklı içerikler geliştirdim.</li>
-            </ul>
-            <div class="vol-gallery">
-                <img src="gonulluluk1.jpg" alt="CIP Etkinlik 1">
-                <img src="gonulluluk2.jpg" alt="CIP Etkinlik 2">
+            <div>
+              <span>My contribution</span>
+              <p>System architecture, ingestion pipeline, retrieval flow, interface, testing, documentation and final presentation.</p>
             </div>
+          </div>
+
+          <ul class="tags" aria-label="Technologies used">
+            <li>Python</li><li>Foundry Local</li><li>SQLite</li><li>Embeddings</li><li>Semantic Search</li>
+          </ul>
+
+          <div class="project-links">
+            <a href="https://nilkadakal.github.io/MicrosoftAI_SummerProject/website/" target="_blank" rel="noopener noreferrer">View project <span>↗</span></a>
+            <a href="https://github.com/NilKadakal/MicrosoftAI_SummerProject" target="_blank" rel="noopener noreferrer">Source code <span>↗</span></a>
+          </div>
         </div>
-    </div>
-</section>
 
-<section id="languages" class="container">
-    <h2>Diller</h2>
-    <div class="languages-grid">
-        <div class="lang-card">
-            <span class="lang-name">Türkçe</span>
-            <span class="lang-level">Ana Dil</span>
+        <div class="system-visual" aria-label="RAG system architecture illustration">
+          <div class="visual-topbar"><span>pipeline.log</span><span><i></i> running locally</span></div>
+          <div class="pipeline">
+            <div class="pipeline-node"><span>01</span><strong>Ingest</strong><small>PDF · DOCX · TXT</small></div>
+            <div class="pipeline-line"><i></i></div>
+            <div class="pipeline-node active"><span>02</span><strong>Embed</strong><small>local vectors</small></div>
+            <div class="pipeline-line"><i></i></div>
+            <div class="pipeline-node"><span>03</span><strong>Retrieve</strong><small>semantic context</small></div>
+            <div class="pipeline-line"><i></i></div>
+            <div class="pipeline-node"><span>04</span><strong>Generate</strong><small>grounded answer</small></div>
+          </div>
+          <div class="log-lines" aria-hidden="true">
+            <p><time>10:24:03</time><b>INFO</b><span>document loaded</span></p>
+            <p><time>10:24:04</time><b>OK</b><span>12 chunks embedded</span></p>
+            <p><time>10:24:05</time><b>OK</b><span>context retrieved</span></p>
+            <p><time>10:24:06</time><b>DONE</b><span>answer generated locally</span></p>
+          </div>
         </div>
-        <div class="lang-card">
-            <span class="lang-name">İngilizce</span>
-            <span class="lang-level">İleri Seviye (Advanced)</span>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <div class="card-topline"><span>Data Science · ML</span><span>02</span></div>
+          <h3>Developer Salary Intelligence</h3>
+          <p>Analysis of developer compensation using Stack Overflow and TIOBE data, combining statistical testing, feature engineering and machine-learning models.</p>
+          <div class="metric-panel">
+            <div class="metric-primary"><span>best model R²</span><strong>0.481</strong></div>
+            <div class="metric-row"><span>Ridge + TIOBE</span><i><b style="--value: 96%"></b></i><small>.481</small></div>
+            <div class="metric-row"><span>Ridge</span><i><b style="--value: 84%"></b></i><small>.421</small></div>
+            <div class="metric-row"><span>Random Forest</span><i><b style="--value: 76%"></b></i><small>.383</small></div>
+          </div>
+          <ul class="tags"><li>Python</li><li>Pandas</li><li>scikit-learn</li><li>Statistics</li></ul>
+          <div class="project-links">
+            <a href="https://nilkadakal.github.io/DSA210_NilKadakal/website/" target="_blank" rel="noopener noreferrer">Dashboard <span>↗</span></a>
+            <a href="https://github.com/NilKadakal/DSA210_NilKadakal" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="card-topline"><span>Frontend · Product</span><span>03</span></div>
+          <h3>IES Digital Platform</h3>
+          <p>A responsive digital home for a student society, bringing its events, team, partnerships and identity into one coherent experience.</p>
+          <div class="browser-mockup" aria-hidden="true">
+            <div class="browser-head"><i></i><i></i><i></i><span>ies-club.com</span></div>
+            <div class="browser-body">
+              <div class="browser-nav"></div>
+              <div class="browser-title"></div>
+              <div class="browser-subtitle"></div>
+              <div class="browser-tiles"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsive UI</li></ul>
+          <div class="project-links">
+            <a href="https://www.ies-club.com" target="_blank" rel="noopener noreferrer">Visit website <span>↗</span></a>
+          </div>
+        </article>
+      </div>
+
+      <a class="more-work reveal" href="https://github.com/NilKadakal/SpongebobAdventureGame" target="_blank" rel="noopener noreferrer">
+        <span><strong>More work</strong> SpongeBob Adventure — a 2D Python/Pygame escape game built with object-oriented design.</span>
+        <span>View repository ↗</span>
+      </a>
+    </section>
+
+    <section class="section experience-section" id="experience">
+      <div class="shell">
+        <header class="section-header reveal">
+          <div>
+            <span class="section-number">02 / Experience</span>
+            <h2>Engineering, product thinking and leadership.</h2>
+          </div>
+          <p>I’ve worked across software, AI, financial technology, communication and team operations — experiences that shape how I build and collaborate.</p>
+        </header>
+
+        <div class="experience-list reveal">
+          <article class="experience-row">
+            <time>2026 — Present</time>
+            <div><span class="company">Akbank</span><h3>Digital Identity & Open Banking Technologies Intern</h3></div>
+            <p>Contributing to product and technology processes within financial technologies, digital identity and the open-banking ecosystem.</p>
+            <div class="row-tags"><span>FinTech</span><span>Open Banking</span></div>
+          </article>
+
+          <article class="experience-row">
+            <time>June 2026</time>
+            <div><span class="company">Microsoft AI Innovators</span><h3>AI Summer Intern</h3></div>
+            <p>Designed and delivered a document-based RAG assistant using Foundry Local, from architecture and implementation to testing and presentation.</p>
+            <div class="row-tags"><span>AI</span><span>RAG</span><span>Python</span></div>
+          </article>
+
+          <article class="experience-row">
+            <time>2025 — Present</time>
+            <div><span class="company">Sabancı University IES</span><h3>President · Previously Head of Organization</h3></div>
+            <p>Leading a 50-person team and managing large-scale events, corporate partnerships and the society’s digital platforms.</p>
+            <div class="row-tags"><span>Leadership</span><span>Operations</span></div>
+          </article>
+
+          <article class="experience-row">
+            <time>2025 — Present</time>
+            <div><span class="company">Sabancı University</span><h3>Marketing & Corporate Communications Team</h3></div>
+            <p>Contributing to content and communication work for official university social channels reaching more than 60,000 followers.</p>
+            <div class="row-tags"><span>Communication</span><span>Content</span></div>
+          </article>
+
+          <article class="experience-row">
+            <time>2025</time>
+            <div><span class="company">Finnovation Software Solutions</span><h3>Software Development Intern</h3></div>
+            <p>Worked on corporate website modernization, frontend implementation and user-experience improvements with Django and Python.</p>
+            <div class="row-tags"><span>Django</span><span>Frontend</span></div>
+          </article>
+
+          <article class="experience-row">
+            <time>2024 — 2026</time>
+            <div><span class="company">Kant Akademi</span><h3>Academic Coach</h3></div>
+            <p>Completed 250+ one-to-one mentoring sessions with 20+ students through structured planning and personalized follow-up.</p>
+            <div class="row-tags"><span>Mentoring</span><span>Planning</span></div>
+          </article>
         </div>
-        <div class="lang-card">
-            <span class="lang-name">İtalyanca</span>
-            <span class="lang-level">Başlangıç (Beginner)</span>
+      </div>
+    </section>
+
+    <section class="section shell" id="about">
+      <header class="section-header reveal">
+        <div>
+          <span class="section-number">03 / About</span>
+          <h2>Technical depth matters. So does context.</h2>
         </div>
-    </div>
-</section>
-            
+        <p>I care about understanding why a system should exist, who will use it and what a good outcome actually looks like.</p>
+      </header>
 
-    <footer id="iletisim">
-    <p>&copy; 2026 Nil Kadakal. Tüm hakları saklıdır.</p>
-    <div class="socials">
-        <a href="https://www.linkedin.com/in/nilkadakal" target="_blank">LinkedIn</a>
-        
-        <a href="https://github.com/nilkadakal" target="_blank">GitHub</a>
-        
-        <a href="mailto:nilkadakal01@gmail.com">E-posta Gönder</a>
-    </div>
-</footer>
-    <div id="imageModal" class="modal">
-         <span class="close">&times;</span>
-    
-         <div class="prev" onclick="changeImage(-1)"><span>&#10094;</span></div>
-    
-         <img class="modal-content" id="fullImage">
-    
-         <div class="next" onclick="changeImage(1)"><span>&#10095;</span></div>
-    </div>
-    
-    <script>
-    let currentImageIndex = 0;
-    const images = ["Ekran1.png", "Ekran2.png", "Ekran3.png"]; 
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>I study Computer Science and Engineering at Sabancı University and pursue a minor in Business Analytics. That combination helps me approach software through engineering, data, product and business perspectives.</p>
+          <p>Beyond coding, leading teams, building partnerships and mentoring students have taught me how to communicate clearly, take ownership and move complex work forward with people.</p>
 
-    function openModal(src) {
-      const modal = document.getElementById("imageModal");
-      const modalImg = document.getElementById("fullImage");
-      modal.style.display = "block";
-      modalImg.src = src;
-    
-      currentImageIndex = images.indexOf(src.split('/').pop());
-    }
+          <div class="stats">
+            <div><strong>1,000+</strong><span>event participants</span></div>
+            <div><strong>50+</strong><span>corporate partnerships</span></div>
+            <div><strong>250+</strong><span>one-to-one mentoring sessions</span></div>
+          </div>
+        </div>
 
-    function changeImage(n) {
-      currentImageIndex += n;
-      if (currentImageIndex >= images.length) { currentImageIndex = 0; }
-      if (currentImageIndex < 0) { currentImageIndex = images.length - 1; }
+        <div class="toolkit reveal">
+          <div class="toolkit-header"><span>toolkit.yml</span><span>main</span></div>
+          <div class="toolkit-row"><span>languages</span><p>Python, C++, JavaScript</p></div>
+          <div class="toolkit-row"><span>backend</span><p>Django, SQLite, REST</p></div>
+          <div class="toolkit-row"><span>ai_data</span><p>RAG, embeddings, Pandas, scikit-learn, statistics</p></div>
+          <div class="toolkit-row"><span>frontend</span><p>Semantic HTML, modern CSS, responsive interfaces</p></div>
+          <div class="toolkit-row"><span>strengths</span><p>Product thinking, leadership, communication, ownership</p></div>
+          <div class="toolkit-footer"><span><i></i> continuously learning</span><span>UTF-8</span></div>
+        </div>
+      </div>
+    </section>
 
-      const modalImg = document.getElementById("fullImage");
-      modalImg.src = images[currentImageIndex];
-    }
+    <section class="contact-section" id="contact">
+      <div class="shell contact-inner reveal">
+        <div>
+          <span class="section-number">04 / Contact</span>
+          <h2>Have an interesting problem to solve?</h2>
+          <p>I’m open to internships, software and AI projects, research collaborations and conversations with people building thoughtful products.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="contact-email" href="mailto:nilkadakal01@gmail.com">nilkadakal01@gmail.com <span>↗</span></a>
+          <div>
+            <a href="https://www.linkedin.com/in/nilkadakal/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/NilKadakal" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    document.querySelector(".close").onclick = function() {
-      document.getElementById("imageModal").style.display = "none";
-    }
+  <footer class="footer shell">
+    <p>© <span id="year">2026</span> Nil Kadakal. Designed and built with HTML, CSS and JavaScript.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
 
-    document.onkeydown = function(e) {
-      if (document.getElementById("imageModal").style.display === "block") {
-        if (e.key === "ArrowLeft") changeImage(-1);
-        if (e.key === "ArrowRight") changeImage(1);
-        if (e.key === "Escape") document.getElementById("imageModal").style.display = "none";
-    }
-   };
-   </script>
+  <script src="script.js" defer></script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
